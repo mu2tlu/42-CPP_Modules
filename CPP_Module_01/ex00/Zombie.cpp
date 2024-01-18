@@ -6,17 +6,17 @@
 /*   By: mumutlu <mumutlu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 13:22:26 by mumutlu           #+#    #+#             */
-/*   Updated: 2024/01/18 16:50:36 by mumutlu          ###   ########.fr       */
+/*   Updated: 2024/01/18 18:17:26 by mumutlu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-void Zombie::setName(std::string setName) {
+void Zombie::setName(std::string setName) {    
     this->name = setName;
 }
 
-std::string Zombie::getName(void) {
+std::string Zombie::getName(void) {    
     return (this->name);
 }
 
