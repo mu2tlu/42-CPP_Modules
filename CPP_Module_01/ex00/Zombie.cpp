@@ -6,7 +6,7 @@
 /*   By: mumutlu <mumutlu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 13:22:26 by mumutlu           #+#    #+#             */
-/*   Updated: 2024/01/18 16:26:37 by mumutlu          ###   ########.fr       */
+/*   Updated: 2024/01/18 16:50:36 by mumutlu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,14 @@ void Zombie::setName(std::string setName) {
 }
 
 std::string Zombie::getName(void) {
-    return (this->name);
+    return (name);
 }
 
 void Zombie::announce(void) {
-    std::cout << this->getName() << ": BraiiiiiiinnnzzzZ..." << std::endl;
+    std::cout << Zombie::getName() << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
 Zombie::~Zombie() {
     std::cout << "Destructor is called" << std::endl;
+    std::cout << std::endl;
 }
