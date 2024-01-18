@@ -1,15 +1,14 @@
-NAME 		= Zombie
-
 SRC			=	main.cpp \
 				newZombie.cpp \
 				randomChump.cpp \
 				Zombie.cpp
 
+NAME 		= Zombie
 CC 			= c++
 CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 OBJ 		= $(SRC:.cpp=.o)
 
-RM			= rm -f
+RM			= rm -rf
 
 all: $(NAME)
 

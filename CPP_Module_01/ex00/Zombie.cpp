@@ -6,7 +6,7 @@
 /*   By: mumutlu <mumutlu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 13:22:26 by mumutlu           #+#    #+#             */
-/*   Updated: 2024/01/18 16:50:36 by mumutlu          ###   ########.fr       */
+/*   Updated: 2024/01/18 17:07:51 by mumutlu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void Zombie::setName(std::string setName) {
 }
 
 std::string Zombie::getName(void) {
-    return (name);
+    return (this->name);
 }
 
 void Zombie::announce(void) {
