@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.cpp                                        :+:      :+:    :+:   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mumutlu <mumutlu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 20:37:18 by mumutlu           #+#    #+#             */
-/*   Updated: 2024/01/18 18:20:17 by mumutlu          ###   ########.fr       */
+/*   Updated: 2024/01/18 19:22:32 by mumutlu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 Contact::Contact(){  
-};
+}
 Contact::~Contact(){
-};
+}
 
 Contact::Contact(std::string name, std::string surname, std::string userName, std::string phoneNumber, std::string secret) {  
     this->name = name;

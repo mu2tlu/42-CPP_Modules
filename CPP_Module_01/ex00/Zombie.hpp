@@ -6,7 +6,7 @@
 /*   By: mumutlu <mumutlu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 16:27:28 by mumutlu           #+#    #+#             */
-/*   Updated: 2024/01/18 16:49:33 by mumutlu          ###   ########.fr       */
+/*   Updated: 2024/01/18 19:14:50 by mumutlu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ class Zombie {
         ~Zombie();
         void announce(void);
         
-        void setName(std::string setName);
-        std::string getName(void);
+        void setter(std::string setName);
+        std::string getter(void);
 };
 
 Zombie* newZombie(std::string name);

@@ -6,7 +6,7 @@
 /*   By: mumutlu <mumutlu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 14:14:01 by mumutlu           #+#    #+#             */
-/*   Updated: 2024/01/18 18:18:42 by mumutlu          ###   ########.fr       */
+/*   Updated: 2024/01/18 19:16:52 by mumutlu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int main(void) {
     Zombie zombie1;
     
-    zombie1.setName("Zombie 1");
+    zombie1.setter("Zombie 1");
     zombie1.announce();
     std::cout << std::endl;
 

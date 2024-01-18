@@ -6,7 +6,7 @@
 /*   By: mumutlu <mumutlu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 14:04:21 by mumutlu           #+#    #+#             */
-/*   Updated: 2024/01/18 18:17:40 by mumutlu          ###   ########.fr       */
+/*   Updated: 2024/01/18 19:17:37 by mumutlu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void randomChump(std::string name) {    
     Zombie zombie;
-    zombie.setName(name);
+    zombie.setter(name);
     zombie.announce();
 }
