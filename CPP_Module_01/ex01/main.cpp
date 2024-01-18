@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mumutlu <mumutlu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/18 13:22:26 by mumutlu           #+#    #+#             */
-/*   Updated: 2024/01/18 19:47:36 by mumutlu          ###   ########.fr       */
+/*   Created: 2024/01/18 18:49:40 by mumutlu           #+#    #+#             */
+/*   Updated: 2024/01/18 19:44:00 by mumutlu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-void Zombie::setter(std::string setName) {    
-    this->name = setName;
-}
-
-std::string Zombie::getter(void) {    
-    return (this->name);
-}
-
-void Zombie::announce(void) {
-    std::cout << Zombie::getter() << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}
-
-Zombie::~Zombie() {
-    std::cout << "Destructor is called" << std::endl;
+int main(void) { 
+    Zombie* zombie;
+    std::string name = "Zombies";
+    int N = 5;
+    zombie = zombieHorde(N, name);
+    for(int i = 0; i < N; i++)
+    {
+        zombie[i].announce();
+    }
+    delete[] zombie;
 }

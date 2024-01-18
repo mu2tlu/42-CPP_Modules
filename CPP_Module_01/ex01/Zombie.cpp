@@ -5,25 +5,33 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mumutlu <mumutlu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/18 13:22:26 by mumutlu           #+#    #+#             */
-/*   Updated: 2024/01/18 19:47:36 by mumutlu          ###   ########.fr       */
+/*   Created: 2024/01/18 18:48:00 by mumutlu           #+#    #+#             */
+/*   Updated: 2024/01/18 19:21:12 by mumutlu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-void Zombie::setter(std::string setName) {    
+Zombie::Zombie() {
+    std::cout << "constructor is called" << std::endl;
+}
+
+Zombie::Zombie(std::string zombieName) {
+    setter(zombieName);
+}
+
+void Zombie::setter(std::string setName) {
     this->name = setName;
 }
 
-std::string Zombie::getter(void) {    
-    return (this->name);
+std::string Zombie::getter() {
+    return(this->name);
 }
 
 void Zombie::announce(void) {
-    std::cout << Zombie::getter() << ": BraiiiiiiinnnzzzZ..." << std::endl;
+        std::cout << this->getter() << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
 Zombie::~Zombie() {
-    std::cout << "Destructor is called" << std::endl;
+    std::cout << "destructor is called" << std::endl;
 }

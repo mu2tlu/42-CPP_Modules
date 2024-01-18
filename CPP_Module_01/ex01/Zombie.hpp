@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mumutlu <mumutlu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/18 13:22:26 by mumutlu           #+#    #+#             */
-/*   Updated: 2024/01/18 19:47:36 by mumutlu          ###   ########.fr       */
+/*   Created: 2024/01/18 18:48:08 by mumutlu           #+#    #+#             */
+/*   Updated: 2024/01/18 19:43:00 by mumutlu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
 
-void Zombie::setter(std::string setName) {    
-    this->name = setName;
-}
+#include <iostream>
 
-std::string Zombie::getter(void) {    
-    return (this->name);
-}
+class Zombie {
+    private:
+        std::string name;
+    public:
+        Zombie();
+        Zombie(std::string);
+        ~Zombie();
 
-void Zombie::announce(void) {
-    std::cout << Zombie::getter() << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}
+        void announce(void);
 
-Zombie::~Zombie() {
-    std::cout << "Destructor is called" << std::endl;
-}
+        void setter(std::string setName);
+        std::string getter(void);
+};
+
+Zombie* zombieHorde(int N, std::string name);
+
+#endif
