@@ -6,7 +6,7 @@
 /*   By: mumutlu <mumutlu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 18:48:00 by mumutlu           #+#    #+#             */
-/*   Updated: 2024/01/18 19:21:12 by mumutlu          ###   ########.fr       */
+/*   Updated: 2024/01/19 15:24:53 by mumutlu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ Zombie::Zombie() {
 }
 
 Zombie::Zombie(std::string zombieName) {
+    std::cout << "constructor is called" << std::endl;
     setter(zombieName);
 }
 
