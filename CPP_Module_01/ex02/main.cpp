@@ -6,7 +6,7 @@
 /*   By: mumutlu <mumutlu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 20:29:59 by mumutlu           #+#    #+#             */
-/*   Updated: 2024/01/18 20:54:28 by mumutlu          ###   ########.fr       */
+/*   Updated: 2024/01/19 15:48:51 by mumutlu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ int main() {
     std::string &stringREF = brain;
 
     std::cout << std::endl;
-    std::cout << "string adress    : " << &brain << std::endl;
+    std::cout << "string    adress : " << &brain << std::endl;
     std::cout << "stringptr adress : " << &stringPTR << std::endl;
     std::cout << "stringREF adress : " << &stringREF << std::endl;
     std::cout << std::endl;
-    std::cout << "string value     : " << brain << std::endl;
+    std::cout << "string    value  : " << brain << std::endl;
     std::cout << "stringptr value  : " << *stringPTR << std::endl;
     std::cout << "stringREF value  : " << stringREF << std::endl;
 } 
