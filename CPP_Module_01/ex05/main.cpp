@@ -1,32 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mumutlu <mumutlu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/19 15:58:46 by mumutlu           #+#    #+#             */
-/*   Updated: 2024/01/25 15:40:23 by mumutlu          ###   ########.fr       */
+/*   Created: 2024/01/23 19:04:38 by mumutlu           #+#    #+#             */
+/*   Updated: 2024/01/25 15:05:40 by mumutlu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANB_HPP
-# define HUMANB_HPP
+#include "Harl.hpp"
 
-#include "Weapon.hpp"
-
-class HumanB {
-private:
-    std::string _nameB;
-    Weapon* _weapon;
-    
-public:
-    void setWeapon(Weapon& weapon);
-    
-    void attack(void);
-    
-    HumanB(std::string name);
-    ~HumanB();
-};
-
-#endif
+int main()
+{
+	Harl h;
+	h.complain("ERROR");
+}
