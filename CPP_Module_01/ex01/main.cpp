@@ -6,16 +6,14 @@
 /*   By: mumutlu <mumutlu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 18:49:40 by mumutlu           #+#    #+#             */
-/*   Updated: 2024/01/19 15:30:12 by mumutlu          ###   ########.fr       */
+/*   Updated: 2024/01/25 17:58:28 by mumutlu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
 int main(void) { 
-    Zombie zombieArray[1];
-    zombieArray->setter("Zombie");
-    std::string name = zombieArray->getter();
+    std::string name = "Zombie";
     Zombie* zombie;
     int N = 5;
     zombie = zombieHorde(N, name);

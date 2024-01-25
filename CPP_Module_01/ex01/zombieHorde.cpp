@@ -6,7 +6,7 @@
 /*   By: mumutlu <mumutlu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 19:32:42 by mumutlu           #+#    #+#             */
-/*   Updated: 2024/01/19 15:26:01 by mumutlu          ###   ########.fr       */
+/*   Updated: 2024/01/25 17:59:16 by mumutlu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 Zombie* zombieHorde(int N, std::string name) {
     Zombie* horde = new Zombie[N];
     for(int i = 0; i < N; i++) {
-        new (&horde[i]) Zombie(name);
+        horde[i] = Zombie(name);
+        // new (&horde[i]) Zombie(name); //Altarnative
     }
     return (horde);
 }
