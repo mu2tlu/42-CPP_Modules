@@ -6,7 +6,7 @@
 /*   By: mumutlu <mumutlu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 18:35:42 by mumutlu           #+#    #+#             */
-/*   Updated: 2024/01/23 18:35:43 by mumutlu          ###   ########.fr       */
+/*   Updated: 2024/01/25 18:43:18 by mumutlu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ std::string replaceString(std::string source, std::string search, std::string re
 int main(int argc, char* argv[]) {
     if(argc != 4) {
         std::cout << "Invalid number of arguments. Usage: program.exe filename s1 s2." << std::endl;
+        return 1;
     }
     std::string fileName = argv[1];
     std::string s1 = argv[2];
