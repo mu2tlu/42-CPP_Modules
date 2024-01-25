@@ -3,7 +3,7 @@ SRC			=	main.cpp \
 
 NAME 		= Harl
 CC 			= c++
-CPPFLAGS	= -Wall -Wextra -Werror -std=c++98 -g3
+CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 OBJ 		= $(SRC:.cpp=.o)
 
 RM			= rm -rf
