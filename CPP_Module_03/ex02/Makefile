@@ -3,7 +3,7 @@ SRC			=	main.cpp \
 				ScavTrap.cpp \
 				FragTrap.cpp
 
-NAME 		= Harl
+NAME 		= FragTrap
 CC 			= c++
 CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 OBJ 		= $(SRC:.cpp=.o)

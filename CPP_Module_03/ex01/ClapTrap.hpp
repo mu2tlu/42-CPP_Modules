@@ -6,12 +6,13 @@
 /*   By: mumutlu <mumutlu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 19:51:15 by mumutlu           #+#    #+#             */
-/*   Updated: 2024/02/07 19:51:16 by mumutlu          ###   ########.fr       */
+/*   Updated: 2024/02/08 08:50:42 by mumutlu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CLAPTRAP_HPP
 # define CLAPTRAP_HPP
+
 # include <iostream>
 
 class ClapTrap {

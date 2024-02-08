@@ -6,12 +6,13 @@
 /*   By: mumutlu <mumutlu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 19:52:31 by mumutlu           #+#    #+#             */
-/*   Updated: 2024/02/07 19:52:32 by mumutlu          ###   ########.fr       */
+/*   Updated: 2024/02/08 08:59:00 by mumutlu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCAVTRAP_HPP
 # define SCAVTRAP_HPP
+
 # include "ClapTrap.hpp"
 
 class ScavTrap : public ClapTrap {

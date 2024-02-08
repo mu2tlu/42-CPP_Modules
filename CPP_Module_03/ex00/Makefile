@@ -1,7 +1,7 @@
 SRC			=	main.cpp \
 				ClapTrap.cpp
 
-NAME 		= Harl
+NAME 		= ClapTrap
 CC 			= c++
 CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 OBJ 		= $(SRC:.cpp=.o)
