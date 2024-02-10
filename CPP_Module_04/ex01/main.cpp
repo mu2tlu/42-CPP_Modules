@@ -34,9 +34,7 @@ int main()
         // Dog* dog = dynamic_cast<Dog*>(animals[0]);
         // Brain* bra = dog->getBrain();
         // for (int i = 0; i < 100; ++i)
-        // {
         //     std::cout << bra->ideas[i] << std::endl;
-        // }
         for (int i = 0; i < numAnimals; ++i)
             delete animals[i];
     
