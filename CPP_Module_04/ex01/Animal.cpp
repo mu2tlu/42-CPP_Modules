@@ -34,3 +34,7 @@ void Animal::setType(std::string type) {
 void Animal::makeSound() const {
     std::cout << "regular animal sound\n";
 }
+
+Brain* Animal::getBrain() const {
+    return (NULL);
+}

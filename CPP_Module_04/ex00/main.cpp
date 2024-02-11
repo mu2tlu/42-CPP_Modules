@@ -4,8 +4,29 @@
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
 
-int main()
-{
+void animalMakeSound(Animal& animal) {
+    std::cout << animal.getType() << std::endl;
+    animal.makeSound();
+}
+
+int main() {
+    {
+        Animal anima;
+        Cat cat;
+        Dog dog;
+        animalMakeSound(dog);
+    }
+    std::cout << "--------------------------" <<std::endl;
+    {
+        Animal *a = new Animal();
+        Animal *c = new Cat();
+        a->makeSound();
+        c->makeSound();
+        delete a;
+        delete c;
+
+    }
+    std::cout << "--------------------------" <<std::endl;
     {
         const Animal* meta = new Animal();
         const Animal* j = new Dog();
@@ -31,10 +52,6 @@ int main()
         meta->makeSound();
         delete meta;
         delete cat;            
-    }
-
-    {
-        
     }
 
     return 0;

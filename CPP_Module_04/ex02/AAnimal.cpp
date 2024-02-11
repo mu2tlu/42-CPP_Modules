@@ -30,7 +30,3 @@ std::string AAnimal::getType() const {
 void AAnimal::setType(std::string type) {
     this->type = type;
 }
-
-void AAnimal::makeSound() const {
-    std::cout << "regular animal sound\n";
-}

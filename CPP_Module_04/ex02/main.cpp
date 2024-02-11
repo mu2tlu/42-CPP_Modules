@@ -8,7 +8,6 @@
 int main()
 {
     {
-        // const Animal* meta = new Animal(); error: allocating an object of abstract class type 'Animal'
         const AAnimal* j = new Dog();
         const AAnimal* i = new Cat();
         std::cout << j->getType() << " " << std::endl;
@@ -32,11 +31,10 @@ int main()
     
         for (int i = 0; i < numAnimals; ++i)
             animals[i]->makeSound();
-    
-        // Dog* doggy = dynamic_cast<Dog*>(animals[0]);
-        // std::cout << doggy->getBrain()->ideas[0] << std::endl;
+
         for (int i = 0; i < numAnimals; ++i)
             delete animals[i];
     }
+
     return 0;
 }

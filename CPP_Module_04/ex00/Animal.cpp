@@ -1,8 +1,8 @@
 #include "Animal.hpp"
 
 Animal::Animal() {
-    type = "Animal";
     std::cout << "Animal constructor called\n";
+    this->type = "Animal";
 }
 
 Animal::Animal(std::string type): type(type) {

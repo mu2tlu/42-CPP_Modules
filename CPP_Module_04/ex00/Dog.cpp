@@ -2,7 +2,7 @@
 
 Dog::Dog() {
     std::cout << "Dog constructor called\n";
-    Animal::type = "Dog";
+    this->type = "Dog";
 }
 
 Dog::Dog(const Dog& copy) {

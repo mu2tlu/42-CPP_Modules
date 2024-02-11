@@ -2,18 +2,18 @@
 
 Cat::Cat() {
     std::cout << "Cat constructor called\n";
-    Animal::type = "Cat";
     this->brain = new Brain();
+    this->type = "Cat";
 }
 
 Cat::Cat(const Cat& copy) {
     std::cout << "Cat copy constructor called\n";
+    this->brain = new Brain();
     *this = copy;
 }
 
 Cat& Cat::operator=(const Cat& copy) {
     Animal::type = copy.type;
-    this->brain = new Brain();
     *this->brain = *copy.brain;
     return (*this);
 }
