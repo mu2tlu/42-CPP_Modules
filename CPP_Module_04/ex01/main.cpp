@@ -6,7 +6,10 @@
 #include "Brain.hpp"
 
 int main()
-{
+{   
+    Cat a;
+    Cat b(a);
+    a=b;
     {
         const Animal* j = new Dog();
         const Animal* i = new Cat();

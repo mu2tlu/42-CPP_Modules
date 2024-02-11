@@ -10,7 +10,7 @@ WrongCat::WrongCat(const WrongCat& copy) {
     *this = copy;
 }
 
-WrongCat &WrongCat::operator=(const WrongCat& copy) {
+WrongCat& WrongCat::operator=(const WrongCat& copy) {
     WrongAnimal::type = copy.type;
     return (*this);
 }

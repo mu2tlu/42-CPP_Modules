@@ -6,14 +6,14 @@
 
 class Cat : public AAnimal {
     private:
-        Brain *brain;
+        Brain* brain;
     public:
         Cat();
         Cat(const Cat& copy);
-        Cat &operator=(const Cat& copy);
+        Cat& operator=(const Cat& copy);
         ~Cat();
         void makeSound() const;
-        Brain *getBrain() const;
+        Brain* getBrain() const;
 };
 
 #endif

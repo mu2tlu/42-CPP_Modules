@@ -33,5 +33,9 @@ int main()
         delete cat;            
     }
 
+    {
+        
+    }
+
     return 0;
 }

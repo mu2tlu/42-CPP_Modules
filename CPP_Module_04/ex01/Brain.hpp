@@ -8,9 +8,9 @@ class Brain {
     public:
         std::string ideas[100];
         Brain();
-        Brain(const Brain& b);
-        Brain &operator=(const Brain& b);
-        virtual ~Brain();
+        Brain(const Brain& copy);
+        Brain& operator=(const Brain& copy);
+        ~Brain();
 };
 
 #endif

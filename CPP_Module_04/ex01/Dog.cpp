@@ -11,9 +11,10 @@ Dog::Dog(const Dog& copy) {
     *this = copy;
 }
 
-Dog &Dog::operator=(const Dog& copy) {
+Dog& Dog::operator=(const Dog& copy) {
     Animal::type = copy.type;
-    this->brain = copy.brain;
+    this->brain = new Brain();
+    *this->brain = *copy.brain;
     return (*this);
 }
 
@@ -21,7 +22,7 @@ void Dog::makeSound() const {
     std::cout << "woof woof\n";
 }
 
-Brain *Dog::getBrain() const {
+Brain* Dog::getBrain() const {
     return this->brain;
 }
 

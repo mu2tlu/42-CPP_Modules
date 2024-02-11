@@ -10,7 +10,7 @@ Cat::Cat(const Cat& copy) {
     *this = copy;
 }
 
-Cat &Cat::operator=(const Cat& copy) {
+Cat& Cat::operator=(const Cat& copy) {
     Animal::type = copy.type;
     return (*this);
 }

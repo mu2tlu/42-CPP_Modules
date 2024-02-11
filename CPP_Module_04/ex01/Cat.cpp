@@ -11,9 +11,10 @@ Cat::Cat(const Cat& copy) {
     *this = copy;
 }
 
-Cat &Cat::operator=(const Cat& copy) {
+Cat& Cat::operator=(const Cat& copy) {
     Animal::type = copy.type;
-    this->brain = copy.brain;
+    this->brain = new Brain();
+    *this->brain = *copy.brain;
     return (*this);
 }
 
@@ -21,8 +22,8 @@ void Cat::makeSound() const {
     std::cout << "meow meow\n";
 }
 
-Brain *Cat::getBrain() const {
-    return brain;
+Brain* Cat::getBrain() const {
+    return this->brain;
 }
 
 Cat::~Cat() {

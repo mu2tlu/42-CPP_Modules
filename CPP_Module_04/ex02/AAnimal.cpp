@@ -14,7 +14,7 @@ AAnimal::AAnimal(const AAnimal& copy) {
     std::cout << "Animal copy constructor called\n";
 }
 
-AAnimal &AAnimal::operator=(const AAnimal& copy) {
+AAnimal& AAnimal::operator=(const AAnimal& copy) {
     this->type = copy.type;
     return (*this);
 }

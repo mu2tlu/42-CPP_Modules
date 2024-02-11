@@ -15,7 +15,7 @@ Brain::Brain(const Brain& copy) {
     *this = copy;
 }
 
-Brain &Brain::operator=(const Brain& copy) {
+Brain& Brain::operator=(const Brain& copy) {
     for (size_t i = 0; i < 100; i++)
         this->ideas[i] = copy.ideas[i];
     return (*this);

@@ -10,7 +10,7 @@ Dog::Dog(const Dog& copy) {
     *this = copy;
 }
 
-Dog &Dog::operator=(const Dog& copy) {
+Dog& Dog::operator=(const Dog& copy) {
     Animal::type = copy.type;
     return (*this);
 }
