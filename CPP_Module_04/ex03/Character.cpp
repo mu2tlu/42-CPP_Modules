@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mumutlu <mumutlu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/10 14:57:17 by mumutlu           #+#    #+#             */
-/*   Updated: 2024/03/10 14:57:18 by mumutlu          ###   ########.fr       */
+/*   Created: 2024/03/10 16:06:31 by mumutlu           #+#    #+#             */
+/*   Updated: 2024/03/10 16:06:32 by mumutlu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,19 @@ Character& Character::operator=( const Character& character ) {
 	if(this != &character) {
 		this->name = character.getName();
 		int i = 0;
-		while (i < 4 && character.inventory[i] != NULL) {
+		while (i < 4) {
 			if (this->inventory[i] != NULL){
 				delete this->inventory[i];
-				}
-			this->inventory[i] = character.inventory[i]->clone();
+				if (character.inventory[i] != NULL)
+					this->inventory[i] = character.inventory[i]->clone();
+				else
+					this->inventory[i] = 0;
+			}
+			else
+				if (character.inventory[i] != NULL)
+					this->inventory[i] = character.inventory[i]->clone();
+				else
+					this->inventory[i] = 0;
 			i++;
 			
 		}

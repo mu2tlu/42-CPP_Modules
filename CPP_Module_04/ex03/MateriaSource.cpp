@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mumutlu <mumutlu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/10 14:58:11 by mumutlu           #+#    #+#             */
-/*   Updated: 2024/03/10 14:58:12 by mumutlu          ###   ########.fr       */
+/*   Created: 2024/03/10 16:06:36 by mumutlu           #+#    #+#             */
+/*   Updated: 2024/03/10 16:06:37 by mumutlu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,11 @@ MateriaSource::~MateriaSource() {
 }
 
 MateriaSource::MateriaSource( const MateriaSource& materiaSource ) {
+	int i = 0;
+	while (i < 4) {
+		this->learnedMaterias[i] = 0;
+		i++;
+	}
 	*this = materiaSource;
 }
 
@@ -37,9 +42,18 @@ MateriaSource& MateriaSource::operator=( const MateriaSource& materiaSource ) {
 		if(this != &materiaSource) {
 		int i = 0;
 		while (i < 4) {
-			if (this->learnedMaterias[i] != NULL)
+			if (this->learnedMaterias[i] != NULL){
 				delete this->learnedMaterias[i];
-			this->learnedMaterias[i] = materiaSource.learnedMaterias[i]->clone();
+				if (materiaSource.learnedMaterias[i] != NULL)
+					this->learnedMaterias[i] = materiaSource.learnedMaterias[i]->clone();
+				else
+					this->learnedMaterias[i] = 0;
+			}
+			else
+				if (materiaSource.learnedMaterias[i] != NULL)
+					this->learnedMaterias[i] = materiaSource.learnedMaterias[i]->clone();
+				else
+					this->learnedMaterias[i] = 0;
 			i++;
 		}
 	}
