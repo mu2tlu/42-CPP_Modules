@@ -21,7 +21,7 @@ class AForm {
         std::string getName(void) const;
         size_t getGradeToSign(void) const;
         size_t getGradeToExec(void) const;
-        std::string getIsSigned(void) const;
+        bool getIsSigned(void) const;
         void beSigned(Bureaucrat& b);
         
         virtual void execute(const Bureaucrat& executor) const = 0;

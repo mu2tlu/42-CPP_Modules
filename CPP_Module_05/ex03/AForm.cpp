@@ -37,10 +37,10 @@ size_t AForm::getGradeToExec(void) const {
     return requiredGradeToExecute;
 }
 
-std::string AForm::getIsSigned(void) const {
+bool AForm::getIsSigned(void) const {
     if (isSigned == false)
-        return "false";
-    return "true";
+        return false;
+    return true;
 }
 
 void AForm::beSigned(Bureaucrat &b) {
