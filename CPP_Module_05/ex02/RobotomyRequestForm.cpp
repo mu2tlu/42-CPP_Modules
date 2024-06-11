@@ -21,7 +21,7 @@ RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm& c
 
 void RobotomyRequestForm::execute(const Bureaucrat& executor) const {
     
-    if (!this->getIsSigned().compare("false"))
+    if (this->getIsSigned() == "false")
         throw FormNotSignedException();
     if (executor.getGrade() >= this->getGradeToExec())
         throw GradeTooLowException();
