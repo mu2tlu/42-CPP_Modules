@@ -24,7 +24,6 @@ void ShrubberyCreationForm::execute(const Bureaucrat& executor) const {
         throw FormNotSignedException();
     if (executor.getGrade() > this->getGradeToExec())
         throw GradeTooLowException();
-    std::cout << executor.getName() << " executed " << this->getName() << std::endl;
 
     std::ofstream o((target + ".shrubbery"));
     if (o.fail())

@@ -25,7 +25,6 @@ void RobotomyRequestForm::execute(const Bureaucrat& executor) const {
         throw FormNotSignedException();
     if (executor.getGrade() > this->getGradeToExec())
         throw GradeTooLowException();
-    std::cout << executor.getName() << " executed " << this->getName() << std::endl;
 
     std::srand(time(0));
     size_t t = std::rand();
