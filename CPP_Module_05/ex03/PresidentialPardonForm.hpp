@@ -1,4 +1,5 @@
-#pragma once
+#ifndef PRESIDENTIALPARDONFORM_HPP
+#define PRESIDENTIALPARDONFORM_HPP
 
 #include "AForm.hpp"
 
@@ -14,3 +15,5 @@ class PresidentialPardonForm : public AForm {
 
         void execute(const Bureaucrat& executor) const;
 };
+
+#endif

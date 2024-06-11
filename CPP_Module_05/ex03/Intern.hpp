@@ -1,4 +1,5 @@
-#pragma once
+#ifndef INTERN_HPP
+#define INTERN_HPP
 
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
@@ -18,3 +19,5 @@ class Intern {
             const char* what() const throw();
         };
 };
+
+#endif
