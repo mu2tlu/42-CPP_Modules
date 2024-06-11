@@ -16,18 +16,16 @@ int main()
 		a.executeForm(*rrf);
     }
     catch (std::exception &e) {
-        delete rrf;
         std::cout << "Exception caught: " << e.what() << std::endl;
     }
-    delete rrf;
 
     AForm* zpf;
     try {
         zpf = someRandomIntern.makeForm("NOT FOUND FORM", "nothing");
+    	delete zpf;
     } catch (std::exception &e) {
-        delete zpf;
         std::cout << e.what() << std::endl;
     }
-    delete zpf;
 
+    delete rrf;
 }
