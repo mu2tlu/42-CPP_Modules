@@ -14,8 +14,11 @@ int main()
 		Bureaucrat a("V", 151);
 		a.signAForm(*rrf);
 		a.executeForm(*rrf);
+        delete rrf;
     }
     catch (std::exception &e) {
+        if (rrf != nullptr)
+            delete rrf;
         std::cout << "Exception caught: " << e.what() << std::endl;
     }
 
@@ -24,8 +27,8 @@ int main()
         zpf = someRandomIntern.makeForm("NOT FOUND FORM", "nothing");
     	delete zpf;
     } catch (std::exception &e) {
+        if (zpf != nullptr)
+            delete zpf;
         std::cout << e.what() << std::endl;
     }
-
-    delete rrf;
 }
