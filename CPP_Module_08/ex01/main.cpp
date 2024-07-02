@@ -1,24 +1,45 @@
 #include "Span.hpp"
-#include <cstdlib>
+#include <iostream>
 
 int main()
 {
-    {
-        Span sp = Span(5);
+	try {
+		Span sp = Span(5);
 
-        sp.addNumber(6);
-        sp.addNumber(3);
-        sp.addNumber(17);
-        sp.addNumber(9);
-        sp.addNumber(11);
+		sp.addNumber(6);
+		sp.addNumber(3);
+		sp.addNumber(17);
+		sp.addNumber(9);
+		sp.addNumber(11);
 
-        sp.print();
+		std::cout << "Shortest span: " << sp.shortestSpan() << std::endl;
+		std::cout << "Longest span: " << sp.longestSpan() << std::endl;
+	}
+	catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
+	
+	try {
+		Span sp = Span(7);
 
-        std::cout << sp.shortestSpan() << std::endl;
-        std::cout << sp.longestSpan() << std::endl;
-    }
+		sp.addNumber(6);
+		sp.addNumber(3);
+		sp.addNumber(17);
+		sp.addNumber(9);
+		sp.addNumber(111);
+		sp.addNumber(115);
+		sp.addNumber(111);
+		sp.addNumber(113);
 
-    {
+		std::cout << "Shortest span: " << sp.shortestSpan() << std::endl;
+		std::cout << "Longest span: " << sp.longestSpan() << std::endl;
+		}
+		catch (std::exception &e) {
+			std::cout << e.what() << std::endl;
+	}
+	
+	try {
+		
         size_t len = 10000;
         std::vector<int> nums;
         srand(time(0));
@@ -29,6 +50,8 @@ int main()
         sp.fill(nums.begin(), nums.end());
         std::cout << sp.shortestSpan() << std::endl;
         std::cout << sp.longestSpan() << std::endl;
-    }
-    return 0;
+		}
+		catch (std::exception &e) {
+			std::cout << e.what() << std::endl;
+	}
 }

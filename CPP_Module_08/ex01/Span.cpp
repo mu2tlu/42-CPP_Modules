@@ -1,11 +1,10 @@
 #include "Span.hpp"
 #include <stdexcept>
-#include <iostream>
 #include <algorithm>
 
 Span::Span() {}
 
-Span::Span(unsigned int N): maxSize(N) { vec.reserve(N); }
+Span::Span(unsigned int N): maxSize(N) {}
 
 Span::~Span() {}
 
@@ -21,7 +20,7 @@ Span &Span::operator=(const Span& other)
 void Span::addNumber(int num)
 {
     if (vec.size() >= maxSize)
-        throw std::out_of_range("Span is full");
+        throw std::out_of_range("Span: is full");
     vec.push_back(num);
 }
 
