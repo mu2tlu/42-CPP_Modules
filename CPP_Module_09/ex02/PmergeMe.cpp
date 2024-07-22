@@ -71,7 +71,7 @@ void PmergeMe::insertionSort(T& array, int start, int end)
 
 		while (prevIter != startIter && *(--prevIter) > tempValue) {
 			*innerIter = *prevIter;
-			innerIter = prevIter
+			innerIter = prevIter;
 		}
 		*innerIter = tempValue;
 	}
