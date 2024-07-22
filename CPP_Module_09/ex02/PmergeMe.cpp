@@ -63,7 +63,7 @@ void PmergeMe::insertionSort(T& array, int start, int end)
 	std::advance(startIter, start);
 	std::advance(endIter, end + 1);
 
-	for (typename T::iterator currentIter = startIter; (currentIter != endIter && currentIter != array.end()); ++currentIter)
+	for (typename T::iterator currentIter = startIter; currentIter != endIter; ++currentIter)
 	{
 		typename T::iterator innerIter = currentIter;
 		int tempValue = *currentIter;
