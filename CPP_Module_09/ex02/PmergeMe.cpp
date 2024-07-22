@@ -58,14 +58,12 @@ void PmergeMe::takeArgs(int ac, char** av)
 template<typename T>
 void PmergeMe::insertionSort(T& array, int start, int end)
 {
-	typename T::iterator startIter;
-	typename T::iterator currentIter = array.begin();
+	typename T::iterator startIter = array.begin();
 	typename T::iterator endIter = array.begin();
-	std::advance(currentIter, start);
-	startIter = currentIter;
+	std::advance(startIter, start);
 	std::advance(endIter, end + 1);
 
-	while (currentIter != endIter && currentIter != array.end())
+	for (typename T::iterator currentIter = startIter; (currentIter != endIter && currentIter != array.end()); ++currentIter)
 	{
 		typename T::iterator innerIter = currentIter;
 		int tempValue = *currentIter;
@@ -78,7 +76,6 @@ void PmergeMe::insertionSort(T& array, int start, int end)
 		}
 
 		*innerIter = tempValue;
-		++currentIter;
 	}
 }
 
