@@ -59,8 +59,8 @@ template<typename T>
 void PmergeMe::insertionSort(T& array, int start, int end)
 {
 	typename T::iterator startIter = array.begin();
-	std::advance(startIter, start);
 	typename T::iterator endIter = array.begin();
+	std::advance(startIter, start);
 	std::advance(endIter, end + 1);
 
 	for (typename T::iterator currentIter = startIter; currentIter != endIter; ++currentIter)
@@ -69,8 +69,10 @@ void PmergeMe::insertionSort(T& array, int start, int end)
 		int tempValue = *currentIter;
 		typename T::iterator prevIter = currentIter;
 
-		while (prevIter != startIter && *(--prevIter) > tempValue)
-			innerIter = prevIter;
+		while (prevIter != startIter && *(--prevIter) > tempValue) {
+			*innerIter = *prevIter;
+			innerIter = prevIter
+		}
 		*innerIter = tempValue;
 	}
 }
