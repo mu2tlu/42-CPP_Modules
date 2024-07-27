@@ -56,10 +56,10 @@ myMultiMap BitcoinExchange::readInput(const char* inputFile)
         getline(inStringStream, key, '|');
         getline(inStringStream, value);
         // erase space 3 character for comparison
-        key.erase(0, key.find_first_not_of("  \t\n\r\f\v"));
-        key.erase(key.find_last_not_of("  \t\n\r\f\v") + 1);
-        value.erase(0, value.find_first_not_of("  \t\n\r\f\v"));
-        value.erase(value.find_last_not_of("  \t\n\r\f\v") + 1);
+        key.erase(0, key.find_first_not_of(" \t\n\r\f\v"));
+        key.erase(key.find_last_not_of(" \t\n\r\f\v") + 1);
+        value.erase(0, value.find_first_not_of(" \t\n\r\f\v"));
+        value.erase(value.find_last_not_of(" \t\n\r\f\v") + 1);
         if (i == 0)
         {
             if (key != "date" && value != "value")
