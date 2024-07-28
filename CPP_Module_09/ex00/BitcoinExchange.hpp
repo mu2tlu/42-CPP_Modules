@@ -19,6 +19,7 @@ public:
     void readData();
 	void processInput(myMultiMap& iMap);
 	size_t checkDate(std::string date);
+    size_t checkValue(std::string value);
 	double exchangeBtc(std::string key, double amount);
     void processBtc(const char* file);
 	void printMap(myMultiMap &map);

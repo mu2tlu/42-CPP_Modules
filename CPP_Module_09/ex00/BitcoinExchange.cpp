@@ -43,6 +43,15 @@ void BitcoinExchange::readData()
     dataFile.close();
 }
 
+size_t BitcoinExchange::checkValue(std::string value) 
+{
+    std::istringstream iss(value);
+    int i;
+    char c;
+    return iss >> i && !(iss >> c);
+
+}
+
 myMultiMap BitcoinExchange::readInput(const char* inputFile)
 {
     std::ifstream inFileStream(inputFile);
@@ -66,6 +75,8 @@ myMultiMap BitcoinExchange::readInput(const char* inputFile)
                 exitError("invalid file format.");
             continue;
         }
+        if(!checkValue(value)) 
+            key = value;
 		iMap.push_back(std::make_pair(key, atof(value.c_str())));
         key.clear();
         value.clear();
