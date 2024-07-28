@@ -46,9 +46,9 @@ void BitcoinExchange::readData()
 size_t BitcoinExchange::checkValue(std::string value) 
 {
     std::istringstream iss(value);
-    int i;
+    double d;
     char c;
-    return iss >> i && !(iss >> c);
+    return iss >> d && !(iss >> c);
 
 }
 
