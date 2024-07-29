@@ -1,6 +1,7 @@
 #include "BitcoinExchange.hpp"
 #include <fstream>
 #include <sstream>
+#include <cstdlib>
 
 BitcoinExchange::BitcoinExchange() {}
 
@@ -38,7 +39,7 @@ void BitcoinExchange::readData()
         std::string date, value;
         getline(strIn, date, ',');
         getline(strIn, value);
-		data.push_back(std::make_pair(date, atof(value.c_str())));
+		data.push_back(std::make_pair(date, value));
     }
     dataFile.close();
 }
@@ -77,7 +78,7 @@ myMultiMap BitcoinExchange::readInput(const char* inputFile)
         }
         if(!checkValue(value)) 
             key = value;
-		iMap.push_back(std::make_pair(key, atof(value.c_str())));
+		iMap.push_back(std::make_pair(key, value));
         key.clear();
         value.clear();
     }
@@ -135,14 +136,16 @@ double BitcoinExchange::exchangeBtc(std::string key, double amount)
         if (it->first >= key)
         {
             if (key == it->first)
-                return (amount * it->second);
+                return (amount * atof(it->second.c_str()));
             else
-                return (amount * prev->second);
+                return (amount * atof(it->second.c_str()));
         }
         prev = it;
     }
     return 0;
 }
+
+// atof(it->second.c_str())
 
 void BitcoinExchange::processInput(myMultiMap& iMap)
 {
@@ -150,15 +153,15 @@ void BitcoinExchange::processInput(myMultiMap& iMap)
 	for (it = iMap.begin(); it != iMap.end(); ++it) {
 		if (checkDate(it->first))
 		{
-			if (it->second == std::string::npos)
+			if (atof(it->second.c_str()) == std::string::npos)
 				std::cout << "Error: there is no value or value is not a number." << std::endl;
-			else if (it->second > 1000)
+			else if (atof(it->second.c_str()) > 1000)
 				std::cout << "Error: too large a number." << std::endl;
-			else if (it->second < 0)
+			else if (atof(it->second.c_str()) < 0)
 				std::cout << "Error: not a positive number." << std::endl;
 			else
 				std::cout << it->first << " => " << it->second << " = " <<
-				exchangeBtc(it->first, it->second) << std::endl;
+				exchangeBtc(it->first, atof(it->second.c_str())) << std::endl;
 		}
 		else
 			std::cout << "Error: bad input => " << it->first << std::endl;

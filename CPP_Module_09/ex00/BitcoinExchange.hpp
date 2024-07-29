@@ -4,8 +4,8 @@
 #include <vector>
 #include <utility>
 
-typedef std::vector<std::pair<std::string, double> > myMultiMap;
-typedef std::vector<std::pair<std::string, double> >::iterator myMultiMapIt;
+typedef std::vector<std::pair<std::string, std::string> > myMultiMap;
+typedef std::vector<std::pair<std::string, std::string> >::iterator myMultiMapIt;
 
 class BitcoinExchange
 {
