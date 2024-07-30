@@ -126,7 +126,7 @@ size_t BitcoinExchange::checkDate(std::string date)
         if (day < 1 || day > 31)
             return 0;
     }
-    if ((day < 1 || day > 31) || (year == 2009 && month == 1 && day < 2))
+    if (year == 2009 && month == 1 && day < 2)
         return 0;
     return 1;
 }
@@ -146,8 +146,6 @@ double BitcoinExchange::exchangeBtc(std::string key, double amount)
         }
         if(it + 1 == data.end() && it->first < key)
                 return (amount * atof(it->second.c_str()));
-        else if(it + 1 == data.end() && it->first > key)
-                return (amount * atof(prev->second.c_str()));
         prev = it;
     }
     return 0;
