@@ -50,7 +50,6 @@ size_t BitcoinExchange::checkValue(std::string value)
     double d;
     char c;
     return iss >> d && !(iss >> c);
-
 }
 
 myMultiMap BitcoinExchange::readInput(const char* inputFile)
