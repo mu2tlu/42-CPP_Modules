@@ -76,8 +76,12 @@ myMultiMap BitcoinExchange::readInput(const char* inputFile)
                 exitError("invalid file format.");
             continue;
         }
-        if(!checkValue(value)) 
-            key = value;
+        if(key == "")
+            continue;
+        if (!checkValue(value)) {
+            if(value != "")
+                key = value; 
+        }
 		iMap.push_back(std::make_pair(key, value));
         key.clear();
         value.clear();
@@ -138,20 +142,22 @@ double BitcoinExchange::exchangeBtc(std::string key, double amount)
             if (key == it->first)
                 return (amount * atof(it->second.c_str()));
             else
-                return (amount * atof(it->second.c_str()));
+                return (amount * atof(prev->second.c_str()));
         }
+        if(it + 1 == data.end() && it->first < key)
+                return (amount * atof(it->second.c_str()));
+        else if(it + 1 == data.end() && it->first > key)
+                return (amount * atof(prev->second.c_str()));
         prev = it;
     }
     return 0;
 }
 
-// atof(it->second.c_str())
-
 void BitcoinExchange::processInput(myMultiMap& iMap)
 {
     myMultiMapIt it;
 	for (it = iMap.begin(); it != iMap.end(); ++it) {
-		if (checkDate(it->first))
+		if (checkDate(it->first) && checkValue(it->second))
 		{
 			if (atof(it->second.c_str()) == std::string::npos)
 				std::cout << "Error: there is no value or value is not a number." << std::endl;
