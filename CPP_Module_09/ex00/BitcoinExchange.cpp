@@ -64,7 +64,6 @@ myMultiMap BitcoinExchange::readInput(const char* inputFile)
         std::istringstream inStringStream(line);
         getline(inStringStream, key, '|');
         getline(inStringStream, value);
-        // erase space 3 character for comparison
         key.erase(0, key.find_first_not_of(" \t\n\r\f\v"));
         key.erase(key.find_last_not_of(" \t\n\r\f\v") + 1);
         value.erase(0, value.find_first_not_of(" \t\n\r\f\v"));
@@ -104,9 +103,7 @@ size_t BitcoinExchange::checkDate(std::string date)
     getline(dateStream, strDay);
     day = atoi(strDay.c_str());
 
-	    // Check for correct number of days in each month
     if (month == 2) {
-        // Check for leap year
         if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
             if (day < 1 || day > 29)
                 return 0;
