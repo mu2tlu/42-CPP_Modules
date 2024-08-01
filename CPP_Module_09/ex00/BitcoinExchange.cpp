@@ -77,10 +77,6 @@ myMultiMap BitcoinExchange::readInput(const char* inputFile)
         }
         if(key == "")
             continue;
-        if (!checkValue(value)) {
-            if(value != "")
-                key = value; 
-        }
 		iMap.push_back(std::make_pair(key, value));
         key.clear();
         value.clear();
