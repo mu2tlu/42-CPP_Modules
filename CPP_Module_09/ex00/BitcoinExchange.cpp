@@ -70,7 +70,7 @@ myMultiMap BitcoinExchange::readInput(const char* inputFile)
         value.erase(value.find_last_not_of(" \t\n\r\f\v") + 1);
         if (i == 0)
         {
-            if (key != "date" && value != "value")
+            if (key != "date" || value != "value")
                 exitError("invalid file format.");
             continue;
         }
